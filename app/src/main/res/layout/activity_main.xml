@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.bunny.braintrainer.MainActivity">
+
+    <TextView
+        android:id="@+id/questionCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0/0"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true" />
+
+    <TextView
+        android:id="@+id/timeCounter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="0:30"
+        android:textSize="25sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/questionText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="33dp"
+        android:text=" ? + ? "
+        android:textSize="40sp"
+        android:layout_below="@+id/questionCounter"
+        android:layout_centerHorizontal="true" />
+
+    <GridLayout
+        android:id="@+id/gridLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/questionText"
+        android:layout_marginTop="35dp"
+        android:padding="15sp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        >
+
+        <Button
+            android:id="@+id/ans1"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="0"
+            android:onClick="answerButton"
+            android:tag="0"
+            android:text=" ?"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/ans2"
+            android:layout_width="170dp"
+            android:layout_height="60sp"
+            android:layout_column="1"
+            android:layout_row="0"
+            android:onClick="answerButton"
+            android:tag="1"
+            android:text=" ?"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/ans3"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_column="0"
+            android:layout_row="1"
+            android:onClick="answerButton"
+            android:tag="2"
+            android:text=" ?"
+            android:textSize="30sp" />
+
+        <Button
+            android:id="@+id/ans4"
+            android:layout_width="170dp"
+            android:layout_height="60dp"
+            android:layout_column="1"
+            android:layout_row="1"
+            android:onClick="answerButton"
+            android:tag="3"
+            android:text=" ?"
+            android:textSize="30sp" />
+    </GridLayout>
+
+    <Button
+        android:id="@+id/startButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Go!"
+        android:textSize="20sp"
+        android:onClick="startGame"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/statusText"
+        android:layout_centerHorizontal="true" />
+
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/gridLayout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:text=""
+        android:textSize="30sp" />
+</RelativeLayout>
